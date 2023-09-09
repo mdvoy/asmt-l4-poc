@@ -7,5 +7,11 @@ type PropTypes = {
 }
 
 export const VacancyList: FC<PropTypes> = ({ items }) => {
-    return items.map((item) => <VacancyCard key={item.id} {...item} />)
+    return (
+        <>
+            {items.map((item) => (
+                <VacancyCard key={item.id} {...item} />
+            ))}
+        </>
+    )
 }
