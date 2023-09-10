@@ -3,14 +3,14 @@ import type { Vacancy } from '../model'
 import { VacancyCard } from './vacancy-card'
 
 type PropTypes = {
-    items: Vacancy[]
+    vacancies: Vacancy[]
 }
 
-export const VacancyList: FC<PropTypes> = ({ items }) => {
+export const VacancyList: FC<PropTypes> = ({ vacancies }) => {
     return (
         <>
-            {items.map((item) => (
-                <VacancyCard key={item.id} {...item} />
+            {vacancies.map((vacancy) => (
+                <VacancyCard key={vacancy.id} {...vacancy} />
             ))}
         </>
     )

@@ -1,19 +1,51 @@
 import { type FC } from 'react'
-import { Heading, VStack } from '@chakra-ui/react'
+import { Button, Checkbox, FormControl, FormLabel, Heading, Input, VStack } from '@chakra-ui/react'
+import { Form } from 'react-router-dom'
 
 export const Filter: FC = () => {
     return (
         <VStack alignItems='start' shadow='base' borderRadius='xl' p='4'>
             <Heading size='md'>Filter</Heading>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sit aliquid nihil enim laborum sed nam
-                quisquam officiis ratione, quam quaerat deleniti reiciendis illum asperiores rem! Sunt deleniti
-                asperiores a! Molestias quidem fugiat ex! Natus maxime quod sunt asperiores quos cumque corporis sit
-                aliquid accusamus. Veritatis fuga veniam accusamus facilis harum accusantium, nostrum labore, nemo
-                itaque distinctio ipsam magni maiores. Necessitatibus, dolorem labore optio aspernatur error
-                voluptatibus expedita! Molestias itaque dolores, quos qui, unde dolorem illo excepturi corporis soluta
-                voluptatibus pariatur laboriosam possimus, aliquam eius hic! Molestias architecto accusantium
-            </p>
+
+            <Form method='get' style={{ width: '100%' }}>
+                <VStack as='fieldset' w='100%' spacing='16px' alignItems='flex-start'>
+                    <FormControl>
+                        <FormLabel color='gray.500' fontSize='md'>
+                            Keyword
+                        </FormLabel>
+
+                        <Input aria-label='search vacancy' name='query' />
+                    </FormControl>
+
+                    <FormControl id='remote'>
+                        <FormLabel htmlFor='remote' color='gray.500' fontSize='md'>
+                            Remote
+                        </FormLabel>
+
+                        <Checkbox name='remote' value='true' />
+                    </FormControl>
+
+                    <FormControl id='office'>
+                        <FormLabel htmlFor='office' color='gray.500' fontSize='md'>
+                            Office
+                        </FormLabel>
+
+                        <Checkbox name='office' value='true' />
+                    </FormControl>
+
+                    <FormControl id='relocation'>
+                        <FormLabel htmlFor='relocation' color='gray.500' fontSize='md'>
+                            Relocation
+                        </FormLabel>
+
+                        <Checkbox name='relocation' value='true' />
+                    </FormControl>
+
+                    <Button colorScheme='blue' type='submit'>
+                        Search
+                    </Button>
+                </VStack>
+            </Form>
         </VStack>
     )
 }

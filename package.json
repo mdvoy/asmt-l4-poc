@@ -10,17 +10,20 @@
         "deploy": "netlify deploy --prod"
     },
     "dependencies": {
+        "@chakra-ui/icons": "^2.1.1",
         "@chakra-ui/react": "^2.8.0",
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
         "@netlify/functions": "^2.0.2",
         "framer-motion": "^10.16.1",
         "netlify": "^13.1.10",
+        "netlify-identity-widget": "^1.9.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.15.0"
     },
     "devDependencies": {
+        "@types/netlify-identity-widget": "^1.9.3",
         "@types/react": "^18.2.15",
         "@types/react-dom": "^18.2.7",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
