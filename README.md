@@ -1,28 +1,18 @@
 [![Deploy to Netlify](https://github.com/mdvoy/asmt-l4-poc/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/mdvoy/asmt-l4-poc/actions/workflows/deploy.yml)
-# React + TypeScript + Vite
+# Post ASMT improvement plan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Covered topics:
 
-Currently, two official plugins are available:
+- CI/CD
+- Scalability within front-end applications
+- Error handling strategies
+- Difference between authentication, authorization, 401
+(Unauthorised), 403 (Forbidden)
+- Create a practical example implementing the technical
+parts of gaps above
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Users
 
-## Expanding the ESLint configuration
+boces74806@gameszox.com / 1234 - admin
+miwos32073@docwl.com / 1234 - viewer
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

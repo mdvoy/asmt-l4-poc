@@ -46,6 +46,24 @@ const mapper = (vacancy: FullVacancy[]): Vacancy[] =>
     }))
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+    const { user } = context.clientContext as { identity: unknown; user: { app_metadata: { roles: string[] } } }
+
+    if (!user) {
+        return {
+            statusCode: 401,
+            body: JSON.stringify({ error: 'Unauthorized' }),
+        }
+    }
+
+    const { roles } = user.app_metadata
+
+    if (!roles || !roles.map((r) => r.toLowerCase()).includes('admin')) {
+        return {
+            statusCode: 403,
+            body: JSON.stringify({ error: 'Forbidden' }),
+        }
+    }
+
     const queryParams = {
         locale: 'en',
         limit: '10000',
